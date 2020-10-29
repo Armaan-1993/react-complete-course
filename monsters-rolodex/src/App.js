@@ -9,15 +9,15 @@ class App extends React.Component {
             monsters: [
                 {
                     name: "Frankestein",
-                    id: "fra",
+                    id: "frank",
                 },
                 {
                     name: "Dracula",
-                    id: "dra",
+                    id: "drac",
                 },
                 {
                     name: "Zombie",
-                    id: "zom",
+                    id: "zomb",
                 },
             ],
         };

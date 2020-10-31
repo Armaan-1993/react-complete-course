@@ -17,6 +17,10 @@ class App extends Component {
             .then((users) => this.setState({ monsters: users }));
     }
     render() {
+        const { monsters, searchMonsters } = this.state;
+        const filteredMonsters = monsters.filter((monster) =>
+            monster.name.toLowerCase().includes(searchMonsters.toLowerCase()),
+        );
         return (
             <div className="App">
                 <input
@@ -26,7 +30,7 @@ class App extends Component {
                         this.setState({ searchMonsters: e.target.value })
                     }
                 />
-                <CardList monsters={this.state.monsters}></CardList>
+                <CardList monsters={filteredMonsters}></CardList>
             </div>
         );
     }

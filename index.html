@@ -7,6 +7,49 @@
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <script src="app.js"></script>
+        <div id="root">React not rendered yet</div>
+        <div id="rootnew"></div>
+        <script src="https://unpkg.com/react@16.8.6/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@16.8.6/umd/react-dom.development.js"></script>
+        <script>
+            const Person = (props) => {
+                return [
+                    React.createElement("h1", {}, props.name),
+                    React.createElement("p", {}, props.occupation),
+                ];
+            };
+
+            class app extends React.Component {
+                render() {
+                    return React.createElement("div", {}, [
+                        React.createElement(
+                            "h1",
+                            {},
+                            "React was Rendered Successfully!!",
+                        ),
+                        React.createElement(Person, {
+                            name: "Armaan",
+                            occupation: "Developer",
+                        }),
+                        React.createElement(Person, {
+                            name: "Rehaan",
+                            occupation: "Scientist",
+                        }),
+                        React.createElement(Person, {
+                            name: "Saju",
+                            occupation: "Dental Surgeon",
+                        }),
+                        React.createElement(Person, {
+                            name: "Susan",
+                            occupation: "Teacher ,Artist",
+                        }),
+                    ]);
+                }
+            }
+            ReactDOM.render(
+                React.createElement(app),
+                document.getElementById("root"),
+            );
+        </script>
     </body>
 </html>

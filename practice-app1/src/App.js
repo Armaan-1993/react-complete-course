@@ -22,7 +22,7 @@ class App extends React.Component {
                 <header className="App-header">
                     <img src={logo} className="App-logo" alt="logo" />
                     <p>{this.state.theYearThatSucks}</p>
-                    <button onClick={this.update}>Update State</button>
+                    <button onClick={this.update}>Update my State</button>
                 </header>
             </div>
         );

@@ -3,17 +3,19 @@ import logo from "./logo.svg";
 import "./App.css";
 
 class App extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
-            theYearThatSucks: 2020,
+            theYearThatSucks: 2020 + this.props.in,
         };
     }
     update = () => {
-        this.setState(
-            { theYearThatSucks: this.state.theYearThatSucks + 1 },
-            () => console.log(this.state.theYearThatSucks),
-        );
+        this.setState((prevState, prevProps) => {
+            return {
+                theYearThatSucks:
+                    prevState.theYearThatSucks + this.props.increment,
+            };
+        });
     };
 
     render() {

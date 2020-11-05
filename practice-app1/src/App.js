@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import { Lifecycles } from "../components/lifecycle-compoent/lifecycle.component.jsx";
 
 class App extends React.Component {
     constructor(props) {

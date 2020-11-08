@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import { Lifecycles } from "./components/lifcycles-component/lifecycles.component.jsx";
+import Lifecycles from "./components/lifcycles-component/lifecycles.component.jsx";
 
 class App extends React.Component {
     constructor(props) {

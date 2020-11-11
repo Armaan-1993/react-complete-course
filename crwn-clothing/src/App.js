@@ -23,7 +23,8 @@ import { Route } from "react-router-dom";
 //     );
 // }
 
-const HomePage = () => {
+const HomePage = (props) => {
+    console.log(props);
     return (
         <div>
             <h1>HOME PAGE</h1>

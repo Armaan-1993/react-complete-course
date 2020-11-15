@@ -1,10 +1,11 @@
 import React from "react";
 import "./App.css";
+import Header from "./components/header.component/header";
 
 function App() {
     return (
         <div className="App">
-            <h1>Lets build an amazon clone</h1>
+            <Header></Header>
         </div>
     );
 }

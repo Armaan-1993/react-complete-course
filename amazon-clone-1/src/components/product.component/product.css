@@ -1,0 +1,19 @@
+.product {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    z-index: 1;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 20px;
+    margin: 10px;
+    width: 100%;
+    min-width: 100px;
+    max-height: 400px;
+}
+.product img {
+    max-height: 200px;
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 15px;
+}

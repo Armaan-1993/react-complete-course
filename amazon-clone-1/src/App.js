@@ -3,18 +3,18 @@ import "./App.css";
 import Header from "./components/header.component/header";
 import Home from "./components/home.component/home";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Checkout from "./components/checkout.component/checkout";
 
 function App() {
     return (
         <Router>
             <div className="App">
+                <Header />
                 <Switch>
                     <Route path="/checkout">
-                        <h1>Yooo waddup</h1>
-                        <Header />
+                        <Checkout />
                     </Route>
                     <Route path="/">
-                        <Header />
                         <Home />
                     </Route>
                 </Switch>

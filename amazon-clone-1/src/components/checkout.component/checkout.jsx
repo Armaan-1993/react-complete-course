@@ -1,6 +1,6 @@
 import React from "react";
 import "./checkout.css";
-import Home from "../home.component/home";
+// import Home from "../home.component/home";
 import Subtotal from "../subtotal.component/subtotal";
 
 const Checkout = ({ title, rating, price, image }) => {

@@ -3,12 +3,15 @@ export const initialState = {
 };
 
 const reducer = (state, action) => {
-    switch (action.type) {
+    switch ((state, action)) {
         case "ADD_TO_BASKET":
             return {
                 ...state,
-                basket: [...state.basket, action.item],
-            }; //that is ,whatever the basket initially
-        //had plus what item the basket decided to add to the basket
+                basket: [state.basket, action.item],
+            };
+        default:
+            return state;
     }
 };
+
+export default reducer;

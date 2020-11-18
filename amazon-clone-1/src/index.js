@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import { StateProvider } from "./state-provider/state-provider";
+import reducer from "./reducer";
 import { initialState } from "./reducer";
 
 ReactDOM.render(

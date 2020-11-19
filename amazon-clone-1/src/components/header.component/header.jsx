@@ -38,7 +38,8 @@ const Header = () => {
                     <div className="header_optionBasket">
                         <ShoppingBasketIcon></ShoppingBasketIcon>
                         <span className="header_optionLineTwo header_BasketCount">
-                            {basket?.length}
+                            {basket?.length}{" "}
+                            {/*using the question mark will check the basket for any error in case if therre is an error*/}
                         </span>
                     </div>
                 </Link>

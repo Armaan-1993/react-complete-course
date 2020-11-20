@@ -6,8 +6,10 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Checkout from "./components/checkout.component/checkout";
 import Login from "./components/login.component/login";
 import { auth } from "./firebase";
+import { useStateValue } from "./state-provider/state-provider";
 
 function App() {
+    const [{}, dispatch] = useStateValue();
     useEffect(() => {
         //useeffect will run once when the App component loads. its used to keep track of the users signed in
         auth.onAuthStateChanged((authUser) => {
@@ -15,8 +17,16 @@ function App() {
 
             if (authUser) {
                 //the user has logged in/was logged in
+                dispatch({
+                    type: "SET_USER",
+                    user: authUser,
+                });
             } else {
                 //the user is logged out
+                dispatch({
+                    type: "SET_USER",
+                    user: null,
+                });
             }
         });
     }, []);

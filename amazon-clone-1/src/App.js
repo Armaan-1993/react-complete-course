@@ -13,8 +13,6 @@ function App() {
     useEffect(() => {
         //useeffect will run once when the App component loads. its used to keep track of the users signed in
         auth.onAuthStateChanged((authUser) => {
-            console.log(`The user is ${authUser}`);
-
             if (authUser) {
                 //the user has logged in/was logged in
                 dispatch({

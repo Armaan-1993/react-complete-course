@@ -39,6 +39,7 @@ const Login = () => {
         <div className="login">
             <Link to="/">
                 <img
+                    alt="amazon logo"
                     className="login_logo"
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png"
                 />

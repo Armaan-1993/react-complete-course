@@ -35,7 +35,7 @@ const Header = () => {
                         className="header_options"
                     >
                         <span className="header_optionLineOne">
-                            Hello {user.email}
+                            Hello Guest
                         </span>
                         <span className="header_optionLineTwo">
                             {user ? "Sign Out" : "Sign in"}
